@@ -6,10 +6,6 @@ body{
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
-.wpk-iframe-generator .wpk-title{
-	text-align: center;
-}
-
 .wpk-iframe-generator .wpk-option{
 	width: 100%;
 	display: flex;

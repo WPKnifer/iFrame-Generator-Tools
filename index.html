@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>iFrame Generator By WPKnifer.com</title>	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header></header>
+	<section>
+		<div class="wpk-iframe-generator">
+			<div class="container">
+				<div class="wpk-title">
+					<h1><?php echo esc_attr($args['title']); ?></h1>
+					<p><?php echo esc_attr($args['subtitle']); ?></p>
+				</div>
+				<div class="wpk-field-area">			
+					<div class="wpk-option">
+
+						<div class="wpk-field">
+							<label for="iframe-name">Name:</label>
+							<input id="iframe-name" class="form-control" type="text" name="name" placeholder="Enter Iframe Name" value="myiframe">
+						</div>
+
+						<div class="wpk-field">
+							<label for="iframe-width">Width:</label>
+							<input id="iframe-width" class="form-control" type="text" name="width" placeholder="Enter Iframe width" value="600">
+						</div>
+
+						<div class="wpk-field">
+							<label for="iframe-height">Height:</label>
+							<input id="iframe-height" class="form-control" type="text" name="height" placeholder="Enter Iframe height" value="400">
+						</div>
+
+						<div class="wpk-field">
+							<label for="iframe-border">Border:</label>
+							<select id="iframe-border" class="form-control">
+								<option value="yes">Yes</option>						
+								<option value="no">No</option>						
+							</select>
+						</div>
+
+						<div class="wpk-field">
+							<label for="iframe-border-type">Border Type:</label>
+							<select id="iframe-border-type" class="form-control">
+								<option value="dotted">Dotted</option>					
+								<option value="dashed">Dashed</option>					
+								<option value="solid">Solid</option>					
+								<option value="double">Double</option>					
+								<option value="groove">Groove</option>					
+								<option value="ridge">Ridge</option>					
+								<option value="inset">Inset</option>					
+								<option value="outset">Outset</option>					
+								<option value="hidden">Hidden</option>					
+							</select>
+						</div>
+
+						<div class="wpk-field">
+							<label for="iframe-border-size">Border Size:</label>
+							<input id="iframe-border-size" class="form-control" type="number" name="border-size" placeholder="Border Size PX" value="1">
+						</div>
+
+						<div class="wpk-field">
+							<label for="iframe-border-color">Border color:</label>
+							<input id="iframe-border-color" class="form-control" type="color" name="border-color">
+						</div>
+						
+						<div class="wpk-field">
+							<label for="iframe-allow">Allow:</label>
+							<select id="iframe-allow" class="form-control">
+								<option value="">Empty</option>
+								<option value="fullscreen">Fullscreen</option>						
+								<option value="payment">Payment</option>						
+							</select>
+						</div>
+
+						<div class="wpk-field">
+							<label for="iframe-scrolling">Scrolling:</label>
+							<select id="iframe-scrolling" class="form-control">
+								<option value="auto">Auto</option>
+								<option value="yes">Yes</option>						
+								<option value="no">no</option>						
+							</select>
+						</div>
+
+						<div class="wpk-field">
+							<label for="iframe-loading">Loading:</label>
+							<select id="iframe-loading" class="form-control">
+								<option value="">Empty</option>
+								<option value="eager">Eager</option>						
+								<option value="lazy">Lazy</option>						
+							</select>
+						</div>
+
+						<div class="wpk-field">
+							<label for="iframe-referrerpolicy">Referrer policy:</label>
+							<select id="iframe-referrerpolicy" class="form-control">
+								<option value="">Empty (Recommended)</option>
+								<option value="no-referrer">No referrer</option>	
+								<option value="no-referrer-when-downgrade">No referrer when downgrade</option>	
+								<option value="origin">Origin</option>	
+								<option value="origin-when-cross-origin">Origin when cross origin</option>	
+								<option value="same-origin">Same origin</option>	
+								<option value="strict-origin">Strict origin</option>	
+								<option value="strict-origin-when-cross-origin">Strict origin when cross origin</option>	
+								<option value="unsafe-url">Unsafe url</option>	
+							</select>
+						</div>
+
+						<div class="wpk-field">
+							<label for="iframe-sandbox">Sandbox:</label>
+							<select id="iframe-sandbox" class="form-control">
+								<option value="">Empty (Recommended)</option>
+								<option value="allow-downloads-without-user-activation">Allow downloads without user activation</option>
+								<option value="allow-downloads">Allow downloads</option>
+								<option value="allow-forms">Allow forms</option>
+								<option value="allow-modals">Allow modals</option>
+								<option value="allow-orientation-lock">Allow orientation lock</option>
+								<option value="allow-pointer-lock">Allow pointer lock</option>
+								<option value="allow-popups">Allow popups</option>
+								<option value="allow-popups-to-escape-sandbox">Allow popups to escape sandbox</option>
+								<option value="allow-presentation">Allow presentation</option>
+								<option value="allow-same-origin">Allow same origin</option>
+								<option value="allow-scripts">Allow scripts</option>
+								<option value="allow-storage-access-by-user-activation">Allow storage access by user activation</option>
+								<option value="allow-top-navigation">Allow top navigation</option>
+								<option value="allow-top-navigation-by-user-activation">Allow top navigation by user activation</option>
+							</select>
+						</div>
+						
+					</div>
+
+					<div class="wpk-field iframe-url-option">
+						<label for="iframe-url">Iframe URL:</label>
+						<input id="iframe-url" class="form-control" type="text" name="url" placeholder="Enter Iframe Url">
+					</div>
+
+					<div class="iframe-output">
+						<button class="generate-iframe btn btn-primary" type="submit">Generate</button>
+						<!-- <button class="preview-iframe" type="submit">Preview</button> -->
+						<textarea id="iframe-output-area" class="form-control"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer></footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>
